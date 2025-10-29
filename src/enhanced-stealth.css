@@ -1,0 +1,264 @@
+/* Enhanced Transparency styles for maximum stealth mode */
+
+/* Main app container transparency - always visible now */
+.app-transparent {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  -webkit-backdrop-filter: blur(0.3px);
+  backdrop-filter: blur(0.3px);
+  opacity: 0.9;
+  transition: opacity 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  pointer-events: auto;
+}
+
+/* Quick reveal on hover */
+.app-transparent:hover {
+  opacity: 0.95;
+  background-color: rgba(255, 255, 255, 0.98) !important;
+}
+
+/* Ultra-stealth mode - now visible */
+.ultra-stealth {
+  opacity: 0.8 !important;
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  -webkit-backdrop-filter: blur(0.3px) !important;
+  backdrop-filter: blur(0.3px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.ultra-stealth:hover {
+  opacity: 0.95 !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Component-specific transparency */
+.queue-transparent {
+  background-color: rgba(248, 250, 252, 0.85) !important;
+  border: 1px solid rgba(203, 213, 225, 0.3) !important;
+  opacity: 0.9;
+}
+
+.queue-transparent:hover {
+  opacity: 0.95;
+  background-color: rgba(248, 250, 252, 0.98) !important;
+  border: 1px solid rgba(203, 213, 225, 0.8) !important;
+}
+
+.solution-transparent {
+  background-color: rgba(241, 245, 249, 0.85) !important;
+  opacity: 0.9;
+}
+
+.solution-transparent:hover {
+  opacity: 0.95;
+  background-color: rgba(241, 245, 249, 0.98) !important;
+}
+
+/* Text transparency - always visible now */
+.text-transparent {
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.text-transparent:hover {
+  color: rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Button transparency */
+.button-transparent {
+  background-color: rgba(59, 130, 246, 0.85) !important;
+  border-color: rgba(59, 130, 246, 0.85) !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  opacity: 1 !important; /* Ensure buttons are always visible */
+}
+
+.button-transparent:hover {
+  background-color: rgba(59, 130, 246, 0.95) !important;
+  border-color: rgba(59, 130, 246, 1) !important;
+  color: white !important;
+  opacity: 1 !important;
+}
+
+/* Card transparency */
+.card-transparent {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(229, 231, 235, 0.6) !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-transparent:hover {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-color: rgba(229, 231, 235, 0.8) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Hide scrollbars completely */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+  overflow: -moz-scrollbars-none; /* Firefox (older versions) */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* WebKit browsers (Chrome, Safari, Edge) */
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
+
+/* Stealth window controls */
+.stealth-window {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Mouse tracking prevention */
+.stealth-content {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Emergency visibility toggle (double-click to reveal) */
+.emergency-visible {
+  opacity: 1 !important;
+  background-color: white !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.emergency-visible * {
+  opacity: 1 !important;
+  color: inherit !important;
+}
+
+/* Ghost mode - now visible */
+.ghost-mode {
+  opacity: 0.8 !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+  -webkit-backdrop-filter: blur(0.3px) !important;
+  backdrop-filter: blur(0.3px) !important;
+}
+
+.ghost-mode:hover {
+  opacity: 0.95 !important;
+}
+
+/* Visible and functional */
+.invisible-functional {
+  opacity: 0.85 !important;
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.invisible-functional:hover {
+  opacity: 0.95 !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Stealth animation for natural movement */
+@keyframes stealth-pulse {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.9; }
+}
+
+.stealth-pulse {
+  animation: stealth-pulse 4s ease-in-out infinite;
+}
+
+/* Quick toggle classes */
+.stealth-off {
+  opacity: 1 !important;
+  background-color: white !important;
+  color: black !important;
+}
+
+.stealth-medium {
+  opacity: 0.8 !important;
+}
+
+.stealth-high {
+  opacity: 0.7 !important;
+}
+
+.stealth-max {
+  opacity: 0.6 !important;
+}
+
+/* Keyboard shortcut indicators (invisible until needed) */
+.shortcut-hint {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  opacity: 0;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  z-index: 10000;
+  transition: opacity 0.2s;
+}
+
+.shortcut-hint.show {
+  opacity: 0.3;
+}
+
+/* Mobile stealth optimizations */
+@media (max-width: 768px) {
+  .app-transparent {
+    opacity: 0.02;
+  }
+  
+  .app-transparent:active {
+    opacity: 0.9;
+  }
+}
+
+/* Print stealth - completely hide when printing */
+@media print {
+  .app-transparent,
+  .ultra-stealth,
+  .ghost-mode,
+  .stealth-content {
+    display: none !important;
+  }
+}
+
+/* Always visible command bar */
+.command-bar-always-visible {
+  opacity: 1 !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.command-bar-always-visible * {
+  opacity: 1 !important;
+  color: inherit !important;
+}
+
+.command-bar-always-visible button {
+  opacity: 1 !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+.command-bar-always-visible button:hover {
+  opacity: 1 !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Ensure text and icons are always visible */
+.always-visible-text {
+  color: rgba(255, 255, 255, 0.95) !important;
+  opacity: 1 !important;
+}
+
+.always-visible-button {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: flex !important;
+}

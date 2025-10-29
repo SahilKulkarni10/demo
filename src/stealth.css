@@ -1,0 +1,190 @@
+/* Enhanced transparency styles for stealth mode */
+
+/* Global stealth variables */
+:root {
+  --stealth-opacity: 0.85;
+  --stealth-hover-opacity: 0.95;
+  --stealth-bg: rgba(255, 255, 255, 0.85);
+  --stealth-border: rgba(0, 0, 0, 0.2);
+  --stealth-text: rgba(0, 0, 0, 0.8);
+}
+
+/* Main app transparency */
+.app-stealth {
+  opacity: var(--stealth-opacity) !important;
+  background-color: var(--stealth-bg) !important;
+  -webkit-backdrop-filter: blur(0.5px);
+  backdrop-filter: blur(0.5px);
+  transition: all 0.3s ease-in-out;
+}
+
+.app-stealth:hover {
+  opacity: var(--stealth-hover-opacity) !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Ultra stealth mode - nearly invisible */
+.ultra-stealth {
+  opacity: 0.8 !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.ultra-stealth:hover {
+  opacity: 0.95 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Component-specific transparency */
+.queue-stealth {
+  background-color: rgba(248, 250, 252, 0.85) !important;
+  border-color: var(--stealth-border) !important;
+  opacity: var(--stealth-opacity);
+}
+
+.queue-stealth:hover {
+  opacity: 0.95;
+  background-color: rgba(248, 250, 252, 0.98) !important;
+}
+
+.solution-stealth {
+  background-color: rgba(241, 245, 249, 0.85) !important;
+  opacity: var(--stealth-opacity);
+}
+
+.solution-stealth:hover {
+  opacity: 0.95;
+  background-color: rgba(241, 245, 249, 0.98) !important;
+}
+
+/* Text transparency */
+.text-stealth {
+  color: var(--stealth-text) !important;
+}
+
+.text-stealth:hover {
+  color: rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Button transparency */
+.btn-stealth {
+  background-color: rgba(59, 130, 246, 0.85) !important;
+  border-color: rgba(59, 130, 246, 0.85) !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+  opacity: 1 !important; /* Ensure buttons are always visible */
+}
+
+.btn-stealth:hover {
+  background-color: rgba(59, 130, 246, 0.95) !important;
+  border-color: rgba(59, 130, 246, 1) !important;
+  color: white !important;
+  opacity: 1 !important;
+}
+
+/* Card transparency */
+.card-stealth {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(229, 231, 235, 0.6) !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-stealth:hover {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-color: rgba(229, 231, 235, 0.8) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Hide scrollbars completely */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Emergency visibility toggle (Ctrl+Shift+V) */
+.emergency-visible {
+  opacity: 1 !important;
+  background-color: white !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+.emergency-visible * {
+  opacity: 1 !important;
+  color: inherit !important;
+}
+
+/* Minimal window chrome */
+.minimal-chrome {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Context menu hiding */
+.no-context {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.no-context:hover {
+  pointer-events: auto;
+}
+
+/* Always visible command bar */
+.command-bar-always-visible {
+  opacity: 1 !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+.command-bar-always-visible * {
+  opacity: 1 !important;
+  color: inherit !important;
+}
+
+.command-bar-always-visible button {
+  opacity: 1 !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+.command-bar-always-visible button:hover {
+  opacity: 1 !important;
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Ensure text and icons are always visible */
+.always-visible-text {
+  color: rgba(255, 255, 255, 0.95) !important;
+  opacity: 1 !important;
+}
+
+.always-visible-button {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: flex !important;
+}
+
+/* Button override for maximum visibility */
+.button-always-visible {
+  opacity: 1 !important;
+  background-color: rgba(59, 130, 246, 0.9) !important;
+  border-color: rgba(59, 130, 246, 0.9) !important;
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+.button-always-visible:hover {
+  opacity: 1 !important;
+  background-color: rgba(59, 130, 246, 1) !important;
+  border-color: rgba(59, 130, 246, 1) !important;
+  color: white !important;
+}
